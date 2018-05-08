@@ -1,45 +1,42 @@
 <!doctype html>
 <html>
     <head>
-        <title>React! React! React!</title>
+        <title>Styling in React</title>
         <script src="https://unpkg.com/react@15.3.2/dist/react.js"></script>
         <script src="https://unpkg.com/react-dom@15.3.2/dist/react-dom.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
         <style>
-
+                #container {
+                    padding: 50px;
+                    background-color: #FFF;
+                }
         </style>
     </head>
     <body>
         <div id="container"></div>
+
         <script type="text/babel">
 
-            var HelloWorld = React.createClass({
+            var Letter = React.createClass({
                 render: function() {
                     return (
-                        <p>Hello, {this.props.test} {this.props.greetTarget}!</p>
+                        <div>
+                            {this.props.children}
+                        </div>
                     );
                 }
             });
 
-            var Buttonify = React.createClass({
-               render: function() {
-                    return (
-                        <div>
-                            <button type={this.props.behavior}>{this.props.children}</button>
-                        </div>
-                   );
-               } 
-            });
-
-
+            var destination = document.querySelector("#container");
             ReactDOM.render(
                 <div>
-                <HelloWorld greetTarget="Batman" test="Nananananananana"/>
-                <HelloWorld greetTarget="Iron Man"/>
-                <HelloWorld greetTarget="Mega Man"/>
-                <Buttonify behavior="Submit">SEND DATA</Buttonify>
-                </div>,
-                document.querySelector("#container")
+                    <Letter>A</Letter>
+                    <Letter>E</Letter>
+                    <Letter>I</Letter>
+                    <Letter>O</Letter>
+                    <Letter>U</Letter>
+                </div>, 
+                destination
             );
         </script>
     </body>
