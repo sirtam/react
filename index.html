@@ -16,7 +16,7 @@
             var HelloWorld = React.createClass({
                 render: function() {
                     return (
-                        <p>Hello, componentized world!</p>
+                        <p>Hello, {this.props.test} {this.props.greetTarget}!</p>
                     );
                 }
             });
@@ -24,7 +24,9 @@
 
             ReactDOM.render(
                 <div>
-                <HelloWorld/>
+                <HelloWorld greetTarget="Batman" test="Nananananananana"/>
+                <HelloWorld greetTarget="Iron Man"/>
+                <HelloWorld greetTarget="Mega Man"/>
                 </div>,
                 document.querySelector("#container")
             );
