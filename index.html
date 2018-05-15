@@ -23,7 +23,7 @@
                     var letterStyle = {
                         padding: 10,
                         margin: 10,
-                        backgroundColor: "ffde00",
+                        backgroundColor: this.props.bgcolor, //"#ffde00",
                         color: "#333",
                         display: "inline-block",
                         fontFamily: "monospace",
@@ -42,11 +42,11 @@
             var destination = document.querySelector("#container");
             ReactDOM.render(
                 <div>
-                    <Letter>A</Letter>
-                    <Letter>E</Letter>
-                    <Letter>I</Letter>
-                    <Letter>O</Letter>
-                    <Letter>U</Letter>
+                    <Letter bgcolor="#58b3ff">A</Letter>
+                    <Letter bgcolor="#ff605f">E</Letter>
+                    <Letter bgcolor="#ffd52e">I</Letter>
+                    <Letter bgcolor="#49dd8e">O</Letter>
+                    <Letter bgcolor="#ae99ff">U</Letter>
                 </div>, 
                 destination
             );
