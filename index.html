@@ -19,8 +19,16 @@
 
             var Square = React.createClass ({
                 render: function() {
+                    
+                    var squareStyle = {
+                        height: 150,
+                        backgroundColor: "#ff6663"
+                    }
+
                     return (
-                        <p>Nothing</p>
+                        <div style={squareStyle}>
+
+                        </div>
                     );
                 }
             });
@@ -35,6 +43,7 @@
 
             var Card = React.createClass ({
                 render: function() {
+                    
                     var cardStyle = {
                         height: 200,
                         width: 150,
@@ -46,7 +55,7 @@
 
                     return (
                         <div style={cardStyle}>
-                            
+                            <Square/>
                         </div>
                     );
                 }
